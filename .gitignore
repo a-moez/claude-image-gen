@@ -1,0 +1,13 @@
+# Python
+__pycache__/
+*.pyc
+
+# API keys: never commit them
+.env
+.env.*
+
+# Images you generate while trying the skill
+*.png
+*.jpg
+*.jpeg
+*.webp

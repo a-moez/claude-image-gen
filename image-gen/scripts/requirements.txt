@@ -1,0 +1,10 @@
+# Dependencies for the image-gen skill.
+#   pip install -r requirements.txt
+#
+# Both SDKs are imported LAZILY, so you only need the one whose provider you use —
+# `--model pro` works without `openai` installed, and vice versa. Pillow is the only
+# hard requirement: it re-encodes returned bytes into the container you asked for.
+
+openai>=2.0            # GPT Image. v1.x predates gpt-image-2.5-* and input_fidelity.
+google-genai>=1.65     # Nano Banana / Gemini image generation
+pillow>=11.0           # image write + format verification (core/io_utils.py)

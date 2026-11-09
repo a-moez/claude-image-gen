@@ -24,6 +24,37 @@ It has been used on Windows. macOS and Linux have not been tested.
 
 ## Install
 
+### The easy way: let Claude Code install it
+
+Open Claude Code (in any folder) and paste this prompt. Claude does the installing and asks before
+every step. Your API key never goes into the chat: you type it into your own terminal yourself.
+
+```
+I want to install the image-gen skill from https://github.com/a-moez/claude-image-gen
+
+1. Read the repo's README.md first and follow its install steps.
+2. Before installing anything, check what I already have: Python, pip,
+   the skill's packages, and whether the skill is already in my Claude
+   skills folder. Tell me what's there and what's missing.
+3. Install only what's missing. Ask me before every install command,
+   and explain each step in one simple sentence. If something can't be
+   installed from here (like Python itself), tell me exactly how to do it.
+4. Put the image-gen folder in my Claude skills folder.
+5. Add the spend-confirmation hook from the README to my user settings.
+   Show me the change before you save it.
+6. Do NOT ask me for my API key in this chat. When it's time, tell me
+   the exact command to run setup_key.py in my own terminal, and wait
+   until I say I'm done.
+7. Finish by running the skill's free check (imagegen.py --check), tell
+   me in plain words if everything is ready, and tell me if I need to
+   restart Claude Code for the skill or the hook to load.
+```
+
+You need an API key with credit first (see "What you need" above). If you're on macOS or Linux, the
+skill hasn't been tested there yet.
+
+### By hand
+
 1. **Download this repo.** Click *Code → Download ZIP* and unzip it, or clone it with git.
 2. **Copy the `image-gen` folder** into your Claude skills folder, `~/.claude/skills/`.
    On Windows that is `C:\Users\<you>\.claude\skills\`, so you end up with
